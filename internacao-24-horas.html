@@ -9,10 +9,12 @@
   <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js', 'intro');</script>
 </head>
 <body>
+  <div class="curtain" aria-hidden="true"><img src="img/logo-branco.png" alt="" width="120" height="82"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
@@ -87,18 +89,67 @@
   </header>
 
   <main>
-  <section class="phero">
-    <img src="img/slide-internacao.jpg" alt="" style="object-position:50% 60%" fetchpriority="high">
-    <div class="wrap">
-      <div class="crumbs"><a href="index.html">Início</a> &nbsp;/&nbsp; Internação 24h</div>
-      <h1>Internação 24 horas</h1>
-      <p>Acompanhamento veterinário em tempo integral e muitas doses de carinho para acelerar a recuperação do seu pet.</p>
-      <div class="split-actions" style="margin-top:0"><a href="tel:+552136282484" class="btn btn-light"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Ligar agora</a><a href="https://wa.me/5521967520101" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a></div>
-      <div class="phero-facts">
-        <div><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span><b>Aberto 24 horas</b>Todos os dias, inclusive feriados</span></div>
-        <div><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span><b>Icaraí, Niterói</b>Rua Dr. Tavares de Macedo, 141</span></div>
-        <div><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg><span><b>Estacionamento próprio</b>Para sua comodidade</span></div>
+  <section class="slider" aria-roledescription="carrossel" aria-label="Internação 24h" tabindex="-1">
+    <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
+      <img class="slide-img" src="img/slide-internacao.jpg" alt="" style="object-position:50% 60%" fetchpriority="high">
+      <div class="slide-content">
+        <div class="wrap">
+          <div class="slide-text">
+            <span class="kicker">Cemevi · Internação 24h</span>
+            <h1>Internação 24 horas</h1>
+            <p>Acompanhamento veterinário em tempo integral e muitas doses de carinho para acelerar a recuperação do seu pet.</p>
+            <div class="slide-actions"><a href="tel:+552136282484" class="btn btn-light"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Ligar agora</a><a href="https://wa.me/5521967520101" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a></div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
+      <img class="slide-img" src="img/hd-cavalier.jpg" alt="" style="object-position:50% 70%" loading="lazy">
+      <div class="slide-content">
+        <div class="wrap">
+          <div class="slide-text">
+            <span class="kicker">Alas separadas</span>
+            <h2 class="slide-title">Cães e gatos em espaços separados.</h2>
+            <p>Instalações separadas reduzem o estresse e respeitam as particularidades de cada espécie.</p>
+            <div class="slide-actions"><a href="tel:+552136282484" class="btn btn-light"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Ligar agora</a><a href="https://wa.me/5521967520101" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
+      <img class="slide-img" src="img/hd-gato-laranja.jpg" alt="" style="object-position:50% 45%" loading="lazy">
+      <div class="slide-content">
+        <div class="wrap">
+          <div class="slide-text">
+            <span class="kicker">Veterinários parceiros</span>
+            <h2 class="slide-title">Internação também para pacientes de colegas.</h2>
+            <p>Sempre com comunicação próxima com o médico veterinário de origem.</p>
+            <div class="slide-actions"><a href="tel:+552136282484" class="btn btn-light"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Falar com a equipe</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-ui">
+      <div class="wrap">
+        <div class="slider-tabs">
+          <button class="slider-tab" type="button"><span class="track"><i></i></span><b>01</b>Internação 24h</button>
+          <button class="slider-tab" type="button"><span class="track"><i></i></span><b>02</b>Alas separadas</button>
+          <button class="slider-tab" type="button"><span class="track"><i></i></span><b>03</b>Parceiros</button>
+        </div>
+        <div class="slider-dots"><button class="slider-dot" type="button" aria-label="Slide 1"></button><button class="slider-dot" type="button" aria-label="Slide 2"></button><button class="slider-dot" type="button" aria-label="Slide 3"></button></div>
+        <div class="slider-arrows">
+          <button class="slider-arrow prev" type="button" aria-label="Anterior"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <button class="slider-arrow next" type="button" aria-label="Próximo"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="facts">
+    <div class="wrap">
+      <div class="fact"><span class="fact-ico"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span><div><b>Aberto 24 horas</b><span>Todos os dias, inclusive fins de semana e feriados</span></div></div>
+      <div class="fact"><span class="fact-ico"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><div><b><a href="tel:+552136282484">(21) 3628-2484</a></b><span>Emergência e agendamentos</span></div></div>
+      <div class="fact"><span class="fact-ico"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></span><div><b>Estacionamento próprio</b><span>Em uma das principais ruas de Icaraí</span></div></div>
+      <div class="fact"><span class="fact-ico"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span><div><b>Cães e gatos</b><span>Com alas separadas na internação</span></div></div>
     </div>
   </section>
 
