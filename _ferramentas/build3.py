@@ -11,7 +11,7 @@ src = open(os.path.join(HERE, "build2.py"), encoding="utf-8").read()
 SPRITE = re.search(r"SPRITE = '''(.*?)'''", src, re.S).group(1)
 SPRITE = SPRITE.replace("</svg>", '  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>\n</svg>')
 
-NAV = [("index.html", "Início"), ("clinica-veterinaria.html", "Clínica"),
+NAV = [("home.html", "Início"), ("clinica-veterinaria.html", "Clínica"),
        ("internacao-24-horas.html", "Internação 24h"), ("banho-e-tosa.html", "Banho e tosa"),
        ("farmacia-veterinaria.html", "Farmácia"), ("contato.html", "Contato")]
 
@@ -63,7 +63,7 @@ def head(title, desc, page):
     </div>
     <div class="bar">
       <div class="wrap">
-        <a href="index.html" class="brand" aria-label="Cemevi — página inicial">
+        <a href="home.html" class="brand" aria-label="Cemevi — página inicial">
           <img class="logo-white" src="img/logo-branco.png" alt="" width="104" height="71">
           <img class="logo-color" src="img/logo.png" alt="Cemevi — Centro Médico Veterinário Icaraí" width="104" height="71">
         </a>
@@ -120,7 +120,7 @@ FOOT = f'''
         <div>
           <h3>Cemevi</h3>
           <ul>
-            <li><a href="index.html#estrutura">Nossa estrutura</a></li>
+            <li><a href="home.html#estrutura">Nossa estrutura</a></li>
             <li><a href="{SP}" target="_blank" rel="noopener">Área do cliente</a></li>
             <li><a href="contato.html">Contato</a></li>
             <li><a href="{ROTA}" target="_blank" rel="noopener">Como chegar</a></li>
@@ -320,9 +320,9 @@ SLIDES = [
    "Emergência"),
 ]
 
-pages["index.html"] = head("Cemevi — Centro Médico Veterinário Icaraí | Clínica veterinária 24h em Niterói",
+pages["home.html"] = head("Cemevi — Centro Médico Veterinário Icaraí | Clínica veterinária 24h em Niterói",
   "Cemevi — Centro Médico Veterinário Icaraí. Clínica médica e cirúrgica, emergência e internação 24 horas, banho e tosa em Niterói/RJ.",
-  "index.html") + f'''
+  "home.html") + f'''
   <main>
 {slider_html(SLIDES, 'Destaques do Cemevi')}
 {FACTS}

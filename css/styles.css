@@ -817,3 +817,10 @@ h1, h2 { font-family: var(--sans); font-weight: 500; text-transform: uppercase; 
 /* Espaço extra no topo do slider para a faixa */
 .slide-content .wrap { padding-top: 200px; }
 @media (max-width: 640px) { .slide-content .wrap { padding-top: 110px; } }
+
+/* Barra "Ligar / WhatsApp" (celular) e botão do WhatsApp (computador) entram depois da cortina */
+.intro .dock { animation: dock-in .8s var(--ease) .75s both; }
+.intro .wa { animation: wa-in .7s var(--ease) 1s both; }
+@keyframes dock-in { from { transform: translateY(100%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes wa-in { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .intro .dock, .intro .wa { animation: none !important; } }
