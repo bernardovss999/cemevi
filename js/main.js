@@ -3,6 +3,35 @@
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Transição entre páginas: a cortina cobre a tela antes de trocar de página
+  var root = document.documentElement;
+  var curtain = document.querySelector('.curtain');
+  setTimeout(function () { root.classList.remove('intro'); }, 1900);
+
+  function isInternalPage(a, e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return false;
+    if (a.target && a.target !== '_self') return false;
+    if (a.hasAttribute('download')) return false;
+    var url = new URL(a.href, location.href);
+    if (url.origin !== location.origin || !/\.html$|\/$/.test(url.pathname)) return false;
+    // mesmo documento (âncora na própria página): deixa rolar normalmente
+    if (url.pathname === location.pathname && url.hash) return false;
+    return url.href !== location.href;
+  }
+  if (curtain && !reduce) {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href]');
+      if (!a || !isInternalPage(a, e)) return;
+      e.preventDefault();
+      curtain.classList.add('leave');
+      setTimeout(function () { location.href = a.href; }, 560);
+    });
+    // Voltar pelo navegador (página restaurada do cache): tira a cortina
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted) curtain.classList.remove('leave');
+    });
+  }
+
   // Header: transparente sobre a foto, sólido depois de rolar
   var header = document.querySelector('.header');
   function onScroll() { if (header) header.classList.toggle('solid', window.scrollY > 40); }
