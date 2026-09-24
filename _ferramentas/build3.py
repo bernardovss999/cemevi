@@ -33,7 +33,7 @@ def head(title, desc, page):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="{desc}">
-  <meta name="theme-color" content="#0d3836">
+  <meta name="theme-color" content="#22625e">
   <title>{title}</title>
   <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">

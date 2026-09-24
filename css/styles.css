@@ -52,7 +52,7 @@ p { margin: 0 0 1em; }
    HEADER (transparente sobre a foto, sólido ao rolar)
    ========================================================= */
 .header { position: fixed; top: 0; left: 0; right: 0; z-index: 60; color: #fff; transition: background-color .35s var(--ease), color .35s var(--ease), box-shadow .35s; }
-.header::before { content: ""; position: absolute; inset: 0 0 -40px; background: linear-gradient(rgba(7,38,36,.55), transparent); pointer-events: none; transition: opacity .35s; }
+.header::before { content: ""; position: absolute; inset: 0 0 -40px; background: linear-gradient(rgba(30,70,67,.55), transparent); pointer-events: none; transition: opacity .35s; }
 .topbar { position: relative; font-size: 13.5px; border-bottom: 1px solid rgba(255,255,255,.18); max-height: 44px; overflow: hidden; transition: max-height .35s var(--ease), opacity .25s, border-color .35s; }
 .topbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; height: 44px; }
 .topbar-l, .topbar-r { display: flex; align-items: center; gap: 22px; opacity: .92; }
@@ -135,8 +135,8 @@ p { margin: 0 0 1em; }
 .slide-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 8s linear; }
 .slide.is-active .slide-img { transform: scale(1); }
 .slide::after { content: ""; position: absolute; inset: 0; background:
-  linear-gradient(90deg, rgba(7,38,36,.82) 0%, rgba(7,38,36,.55) 38%, rgba(7,38,36,.05) 72%),
-  linear-gradient(0deg, rgba(7,38,36,.7) 0%, transparent 42%); }
+  linear-gradient(90deg, rgba(30,70,67,.82) 0%, rgba(30,70,67,.55) 38%, rgba(30,70,67,.05) 72%),
+  linear-gradient(0deg, rgba(30,70,67,.7) 0%, transparent 42%); }
 .slide-content { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; }
 .slide-content .wrap { width: 100%; padding-top: 170px; padding-bottom: 150px; }
 .slide-text { max-width: 680px; }
@@ -176,8 +176,8 @@ p { margin: 0 0 1em; }
 .phero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: settle 2.4s var(--ease) both; }
 @keyframes settle { from { transform: scale(1.06); } to { transform: none; } }
 .phero::after { content: ""; position: absolute; inset: 0; background:
-  linear-gradient(90deg, rgba(7,38,36,.82) 0%, rgba(7,38,36,.45) 45%, rgba(7,38,36,.05) 80%),
-  linear-gradient(0deg, rgba(7,38,36,.75) 0%, transparent 45%); }
+  linear-gradient(90deg, rgba(30,70,67,.82) 0%, rgba(30,70,67,.45) 45%, rgba(30,70,67,.05) 80%),
+  linear-gradient(0deg, rgba(30,70,67,.75) 0%, transparent 45%); }
 .phero .wrap { position: relative; z-index: 2; width: 100%; padding-top: 180px; padding-bottom: 60px; }
 .crumbs { font-size: 14px; margin-bottom: 22px; opacity: .8; }
 .crumbs a { text-decoration: none; }
@@ -229,7 +229,7 @@ p { margin: 0 0 1em; }
    ========================================================= */
 .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .service { display: flex; flex-direction: column; background: var(--white); border-radius: var(--r); overflow: hidden; text-decoration: none; transition: transform .4s var(--ease), box-shadow .4s var(--ease); }
-.service:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -24px rgba(13,56,54,.35); }
+.service:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -24px rgba(30,70,67,.35); }
 .service-img { aspect-ratio: 4 / 3.4; overflow: hidden; }
 .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
 .service:hover .service-img img { transform: scale(1.05); }
@@ -445,7 +445,7 @@ p { margin: 0 0 1em; }
 .footer-bottom { margin-top: 72px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.12); display: flex; justify-content: space-between; gap: 16px; font-size: 14px; color: rgba(255,255,255,.5); }
 .footer-paw { position: absolute; color: rgba(255,255,255,.035); }
 
-.wa { position: fixed; right: 24px; bottom: 24px; z-index: 55; width: 58px; height: 58px; border-radius: 50%; background: var(--t-700); color: #fff; display: grid; place-items: center; font-size: 26px; box-shadow: 0 12px 30px -8px rgba(7,38,36,.5); transition: background .25s, transform .3s var(--ease); }
+.wa { position: fixed; right: 24px; bottom: 24px; z-index: 55; width: 58px; height: 58px; border-radius: 50%; background: var(--t-700); color: #fff; display: grid; place-items: center; font-size: 26px; box-shadow: 0 12px 30px -8px rgba(30,70,67,.5); transition: background .25s, transform .3s var(--ease); }
 .wa:hover { background: var(--t-800); transform: translateY(-3px); }
 .dock { display: none; }
 
@@ -544,7 +544,7 @@ p { margin: 0 0 1em; }
   .brand { width: 82px; height: 56px; }
 
   .slider { min-height: 580px; }
-  .slide::after { background: linear-gradient(0deg, rgba(7,38,36,.94) 0%, rgba(7,38,36,.62) 48%, rgba(7,38,36,.12) 75%, rgba(7,38,36,.4) 100%); }
+  .slide::after { background: linear-gradient(0deg, rgba(30,70,67,.94) 0%, rgba(30,70,67,.62) 48%, rgba(30,70,67,.12) 75%, rgba(30,70,67,.4) 100%); }
   .slide-content { align-items: flex-end; }
   .slide-content .wrap { padding-top: 90px; padding-bottom: 104px; }
   .slide h1, .slide .slide-title { font-size: clamp(34px, 9.6vw, 44px); margin-bottom: 16px; }
@@ -555,7 +555,7 @@ p { margin: 0 0 1em; }
   .slider-arrow { width: 44px; height: 44px; font-size: 18px; }
 
   .phero { min-height: 0; }
-  .phero::after { background: linear-gradient(0deg, rgba(7,38,36,.94) 0%, rgba(7,38,36,.55) 55%, rgba(7,38,36,.35) 100%); }
+  .phero::after { background: linear-gradient(0deg, rgba(30,70,67,.94) 0%, rgba(30,70,67,.55) 55%, rgba(30,70,67,.35) 100%); }
   .phero .wrap { padding-top: 160px; padding-bottom: 44px; }
   .phero h1 { font-size: clamp(34px, 9.6vw, 44px); }
   .phero p { font-size: 16px; margin-bottom: 26px; }
@@ -824,3 +824,104 @@ h1, h2 { font-family: var(--sans); font-weight: 500; text-transform: uppercase; 
 @keyframes dock-in { from { transform: translateY(100%); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes wa-in { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .intro .dock, .intro .wa { animation: none !important; } }
+
+/* =========================================================
+   PALETA DO INSTAGRAM DO CEMEVI
+   Menta + pêssego/blush + coral, com verde-água nos textos.
+   Redefine os tokens do site inteiro a partir daqui.
+   ========================================================= */
+:root {
+  --mint: #bfe8e3;
+  --mint-2: #dcf3f0;
+  --mint-3: #eef9f7;
+  --peach: #f5ddd0;
+  --peach-2: #fbeee6;
+  --peach-3: #fdf6f1;
+  --coral: #ef6b5e;
+  --coral-d: #d9564a;
+  --teal: #5bbab2;
+  --teal-d: #2c7f79;
+  --teal-dd: #22625e;
+
+  /* tokens antigos apontando para a paleta nova */
+  --t-950: var(--teal-dd);
+  --t-900: var(--teal-d);
+  --t-800: var(--coral-d);
+  --t-700: var(--coral);
+  --t-600: var(--coral);
+  --t-500: var(--teal);
+  --t-300: var(--mint);
+  --t-200: var(--peach);
+  --t-100: var(--mint-2);
+  --t-50: var(--mint-3);
+
+  --bg: var(--peach-3);
+  --ink: #274a47;
+  --ink-2: #587270;
+  --muted: #8a9a98;
+  --line: #eadcd2;
+}
+
+/* Títulos no verde-água dos posts; etiquetas em coral */
+h1, h2 { color: var(--teal-d); }
+.slide h1, .slide .slide-title, .phero h1, .band h2, .app h2, .twin-dark h2, .footer-top h2 { color: #fff; }
+.kicker { color: var(--coral); }
+.slide .kicker, .phero .kicker { color: var(--peach); }
+.app .kicker, .twin-dark .kicker { color: var(--peach); }
+.quote { color: var(--teal-d); border-left-color: var(--coral); }
+
+/* Fundos alternando menta e pêssego */
+.section-tint { background: var(--mint-3); }
+.section-white { background: var(--peach-2); }
+.section-white .duo img + img { border-color: var(--peach-2); }
+.pals { background: var(--mint-3); }
+.pals-side::before { background: var(--peach); opacity: 1; }
+.facts { background: #fff; }
+
+/* Ícones e cartões: menta e pêssego alternados, ícone em coral */
+.fact-ico, .tile-ico, .card-ico, .visit-list .vi { background: var(--mint-2); color: var(--coral); }
+.fact:nth-child(even) .fact-ico, .card:nth-child(even) .card-ico, .tile:nth-child(even) .tile-ico { background: var(--peach); }
+.card:hover, .tile:hover { border-color: var(--mint); }
+.tile strong { color: var(--coral); }
+.checks .ico { color: var(--coral); }
+.step::before { color: var(--coral); }
+.steps, .step + .step, .step { border-color: var(--mint); }
+.cat-img { background: var(--mint-2); border-color: var(--mint-2); }
+.cat:nth-child(even) .cat-img { background: var(--peach); border-color: var(--peach); }
+.cat:hover .cat-img { border-color: var(--coral); }
+.shot figcaption { color: var(--teal-d); }
+.service-num { color: var(--coral); }
+
+/* Blocos de destaque */
+.twin-dark { background: var(--coral); }
+.twin-dark p { color: rgba(255,255,255,.9); }
+.twin-light { background: var(--mint); }
+.app { background: var(--teal-d); }
+.app-list .ico { color: var(--peach); }
+.bigpaw { color: var(--teal); }
+.phone { background: var(--mint-3); box-shadow: 0 0 0 8px #fff, 0 40px 80px rgba(30,70,67,.35); }
+.phone-grid div, .phone-row { background: var(--mint-2); }
+.band { background: var(--coral); }
+.band p { color: rgba(255,255,255,.92); }
+
+/* Botões */
+.btn-primary { background: var(--coral); }
+.btn-primary:hover { background: var(--coral-d); }
+.btn-outline { border-color: var(--teal-d); color: var(--teal-d); }
+.btn-outline:hover { background: var(--teal-d); color: #fff; }
+.btn-light { color: var(--teal-dd); }
+.band .btn-light, .twin-dark .btn-light { color: var(--coral-d); }
+.link { color: var(--coral); }
+.chip.active { background: var(--teal-d); border-color: var(--teal-d); }
+.chip:hover { border-color: var(--coral); color: var(--coral); }
+
+/* Rodapé verde-água, cortina e menu do celular */
+.footer { background: var(--teal-dd); color: rgba(255,255,255,.8); }
+.footer-paw { color: rgba(255,255,255,.06); }
+.faq summary::after { background:
+  linear-gradient(var(--coral), var(--coral)) center / 100% 1.8px no-repeat,
+  linear-gradient(var(--coral), var(--coral)) center / 1.8px 100% no-repeat; }
+.faq summary:hover { color: var(--coral); }
+.dock { background: rgba(253,246,241,.97); }
+.dock-wa { border-color: var(--teal-d); color: var(--teal-d); }
+@media (max-width: 960px) { .nav ul a.active { color: var(--peach); } }
